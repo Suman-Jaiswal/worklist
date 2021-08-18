@@ -18,7 +18,7 @@ export default function Dashboard() {
         <>
             <div className='d-flex flex-wrap container-lg my-5 gap-4 dashboard' style={{minHeight: '70vh'}}>
                 {
-                    plansA.length < 0 ? plansA.map(
+                    plansA.length > 0 ? plansA.map(
                         (plan, i) => <SimpleCard
                             key={plan.id}
                             sno={i + 1}
