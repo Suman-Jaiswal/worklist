@@ -4,7 +4,7 @@ import { PlanContext } from '../contexts/PlanContext'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlus } from '@fortawesome/free-solid-svg-icons'
 
-export default function AddPlanBtn() {
+export default function AddPlanBtn({ variant, color }) {
     const { dispatch } = useContext(PlanContext)
     const [open, setOpen] = useState(false)
     const [title, setTitle] = useState('')
@@ -44,14 +44,14 @@ export default function AddPlanBtn() {
 
     return (
         <>
-            <Button variant='success' onClick={openModal}   aria-labelledby="contained-modal-title-vcenter" centered >
-                <FontAwesomeIcon icon={faPlus} size='lg' /> <span className='ms-1'>Create</span>
+            <Button variant={variant} className={color} onClick={openModal} aria-labelledby="contained-modal-title-vcenter" centered >
+                <FontAwesomeIcon icon={faPlus} size='lg' /> <span className='ms-1 create-text'>Create</span>
             </Button>
             <Modal size="lg" show={open} onHide={closeModal} >
                 <Form onSubmit={handleSubmit} >
                     <Modal.Header className='text-center' closeButton >
                         <div className='m-auto bold display-6' >
-                            Add Plan
+                            Create Plan
                         </div>
                     </Modal.Header>
                     <Modal.Body>

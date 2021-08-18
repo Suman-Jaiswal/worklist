@@ -1,6 +1,6 @@
 {
-  "short_name": "NINJA Reading List",
-  "name": "Book Reading List App",
+  "short_name": "NINJA Worklist",
+  "name": "To-Do Manager App",
   "icons": [
     {
       "src": "favicon.ico",
