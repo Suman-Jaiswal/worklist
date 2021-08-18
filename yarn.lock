@@ -1527,13 +1527,6 @@
     react-is "^16.8.0 || ^17.0.0"
     react-transition-group "^4.4.0"
 
-"@material-ui/icons@^4.11.2":
-  version "4.11.2"
-  resolved "https://registry.yarnpkg.com/@material-ui/icons/-/icons-4.11.2.tgz#b3a7353266519cd743b6461ae9fdfcb1b25eb4c5"
-  integrity sha512-fQNsKX2TxBmqIGJCSi3tGTO/gZ+eJgWmMJkgDiOfyNaunNaxcklJQFaFogYcFl0qFuaEz1qaXYXboa/bUXVSOQ==
-  dependencies:
-    "@babel/runtime" "^7.4.4"
-
 "@material-ui/styles@^4.11.4":
   version "4.11.4"
   resolved "https://registry.yarnpkg.com/@material-ui/styles/-/styles-4.11.4.tgz#eb9dfccfcc2d208243d986457dff025497afa00d"
@@ -9375,11 +9368,6 @@ react-bootstrap@^1.6.1:
     uncontrollable "^7.2.1"
     warning "^4.0.3"
 
-react-checklist@^1.0.12:
-  version "1.0.12"
-  resolved "https://registry.yarnpkg.com/react-checklist/-/react-checklist-1.0.12.tgz#7bf8376ee40c34a194fd56cce78d1dd83c11ea6f"
-  integrity sha512-gYh4ZOGA+tva3Gw1u0LU7gAnwn9JnnmlsuzGfQHC2aWypDaN2sbrO1JgQhYJvVwJqr4J7Sf+gguZ14BL5iitNA==
-
 react-dev-utils@^11.0.3:
   version "11.0.4"
   resolved "https://registry.yarnpkg.com/react-dev-utils/-/react-dev-utils-11.0.4.tgz#a7ccb60257a1ca2e0efe7a83e38e6700d17aa37a"
@@ -11033,11 +11021,6 @@ tty-browserify@0.0.0:
   version "0.0.0"
   resolved "https://registry.yarnpkg.com/tty-browserify/-/tty-browserify-0.0.0.tgz#a157ba402da24e9bf957f9aa69d524eed42901a6"
   integrity sha1-oVe6QC2iTpv5V/mqadUk7tQpAaY=
-
-txt-file-to-json@^3.0.6:
-  version "3.0.6"
-  resolved "https://registry.yarnpkg.com/txt-file-to-json/-/txt-file-to-json-3.0.6.tgz#3694b3b3304e62c4b9f1ef25c1998659e936923a"
-  integrity sha512-DoMaLb7+UTPVRSO+lrKpI/v/md8ONdH1WMyG2V1A8vcwNH6NRkVUXy+kv2e42eSWQPnZ/e2mDTmPqyP+VFN/2A==
 
 type-check@^0.4.0, type-check@~0.4.0:
   version "0.4.0"

@@ -28,6 +28,7 @@ const useStyles = makeStyles({
 });
 
 export default function SimpleCard({ plan, sno }) {
+
     const [progress, setProgress] = useState(null)
     const classes = useStyles();
 
@@ -35,32 +36,38 @@ export default function SimpleCard({ plan, sno }) {
         const completed = plan.topics.filter(x => x.completed === true).length
         const total = plan.topics.length
         const now = Math.floor((completed / total) * 100)
-
         setProgress(now)
-    },[plan])
-
-
+    }, [plan])
 
     return (
         <div>
             <Card className={classes.root}>
+
                 <CardContent className='px-3'>
+
                     <div className={`${classes.title} d-flex justify-content-between text-secondary `} gutterbottom='true'>
                         {sno}
                         <div  ><DeletePlanBtn id={plan.id} title={plan.title} /></div>
                     </div>
+
                     <Link className='text-decoration-none text-dark' to={`/plan/${plan.id}`}  >
+
                         <Typography variant="h5" component="h2">
                             {plan.title}
                         </Typography>
+
                         <Typography className={classes.pos} color="textSecondary">
                             {plan.description}
                         </Typography>
+
                         <div className='py-3' >
                             <ProgressBar now={progress} label={`${progress}%`} />
                         </div>
+
                     </Link>
+
                 </CardContent>
+
             </Card>
         </div>
 

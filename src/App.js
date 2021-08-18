@@ -7,17 +7,23 @@ import PlanDetails from './components/PlanDetails';
 import Footer from './components/Footer';
 
 function App() {
-  console.log( document.querySelectorAll(" p * div "))
+
     return (
         <div className='App'>
+
             <PlanContextProvider>
-                    <Navbar />
+
+                <Navbar />
+
                 <Switch>
                     <Route path='/plan/:id' exact component={PlanDetails} />
                     <Route path='/' exact component={Dashboard} />
                 </Switch>
-                <Footer/>
+
+                <Footer />
+
             </PlanContextProvider>
+
         </div>
     );
 }

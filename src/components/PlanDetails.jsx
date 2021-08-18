@@ -3,6 +3,7 @@ import { useParams } from 'react-router';
 import { PlanContext } from '../contexts/PlanContext'
 
 export default function PlanDetails() {
+
     const { id } = useParams()
     const [plan, setPlan] = useState({})
     const [toggle, setToggle] = useState(true)
@@ -32,6 +33,7 @@ export default function PlanDetails() {
     }
 
     useEffect(() => {
+
         const plan = JSON.parse(localStorage.getItem('plans')).find((plan) => plan.id === id)
         const planIndex = JSON.parse(localStorage.getItem('plans')).findIndex((plan) => plan.id === id)
         console.log(plan)
@@ -41,14 +43,18 @@ export default function PlanDetails() {
     }, [id, toggle])
 
     return (
-        <div  style={{minHeight: '83.3vh'}} >
+        <div style={{ minHeight: '83.3vh' }} >
+
             <div className="display-6 pt-3 text-center" >
                 {plan.title}
             </div>
+
             <div className=" text-center pt-1 pb-3">
                 {'{'} {plan.description} {'}'}
             </div>
+
             <div className="container my-2">
+
                 <div className="inbox">
                     {
                         plan.topics ? plan.topics.map((topic, i) => <div key={i} className="item">
@@ -57,7 +63,9 @@ export default function PlanDetails() {
                         </div>) : null
                     }
                 </div>
+
             </div>
+
         </div>
     )
 }

@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlus } from '@fortawesome/free-solid-svg-icons'
 
 export default function AddPlanBtn({ variant, color }) {
+
     const { dispatch } = useContext(PlanContext)
     const [open, setOpen] = useState(false)
     const [title, setTitle] = useState('')
@@ -47,13 +48,17 @@ export default function AddPlanBtn({ variant, color }) {
             <Button variant={variant} className={color} onClick={openModal} aria-labelledby="contained-modal-title-vcenter" centered >
                 <FontAwesomeIcon icon={faPlus} size='lg' /> <span className='ms-1 create-text'>Create</span>
             </Button>
+
             <Modal size="lg" show={open} onHide={closeModal} >
+
                 <Form onSubmit={handleSubmit} >
+
                     <Modal.Header className='text-center' closeButton >
                         <div className='m-auto bold display-6' >
                             Create Plan
                         </div>
                     </Modal.Header>
+
                     <Modal.Body>
                         <Form.Label>Title</Form.Label>
                         <Form.Control className='mb-4' onChange={(e) => setTitle(e.target.value)} placeholder={'Title'} />
@@ -63,11 +68,15 @@ export default function AddPlanBtn({ variant, color }) {
                         <Form.Control className='mb-4' as='textarea' rows={8} onChange={(e) => setInput(e.target.value)}
                             placeholder={'Add topics in each line \n ********example*******\n Topic 1\n Topic 2\n Topic 3\n  ...\n '} />
                     </Modal.Body>
+
                     <Modal.Footer>
                         <Button type='submit' >Add</Button>
                     </Modal.Footer>
+
                 </Form>
+
             </Modal>
+
         </>
 
     )
