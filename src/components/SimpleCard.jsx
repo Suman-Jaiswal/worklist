@@ -56,7 +56,7 @@ export default function SimpleCard({ plan, sno }) {
                         <Typography className={classes.pos} color="textSecondary">
                             {plan.description}
                         </Typography>
-                        <div className='p-3' >
+                        <div className='py-3' >
                             <ProgressBar now={progress} label={`${progress}%`} />
                         </div>
                     </Link>

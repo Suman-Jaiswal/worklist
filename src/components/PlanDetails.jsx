@@ -9,7 +9,7 @@ export default function PlanDetails() {
     const { dispatch } = useContext(PlanContext)
 
     const handleCheck = (i) => {
-        
+
         setToggle(!toggle)
 
         let obj = JSON.parse(localStorage.getItem('plans'))[plan.id]
@@ -27,7 +27,7 @@ export default function PlanDetails() {
 
         const updatedPlans = JSON.parse(localStorage.getItem('plans'))
 
-        dispatch({type: 'UPDATE_PLANS', updatedPlans})
+        dispatch({ type: 'UPDATE_PLANS', updatedPlans })
 
     }
 
@@ -41,14 +41,14 @@ export default function PlanDetails() {
     }, [id, toggle])
 
     return (
-        <>
-            <div className="display-6 pt-3 text-center">
+        <div  style={{minHeight: '83.3vh'}} >
+            <div className="display-6 pt-3 text-center" >
                 {plan.title}
             </div>
-            <div className=" text-center py-2">
-                {plan.description}
+            <div className=" text-center pt-1 pb-3">
+                {'{'} {plan.description} {'}'}
             </div>
-            <div className="container my-1">
+            <div className="container my-2">
                 <div className="inbox">
                     {
                         plan.topics ? plan.topics.map((topic, i) => <div key={i} className="item">
@@ -57,11 +57,7 @@ export default function PlanDetails() {
                         </div>) : null
                     }
                 </div>
-
             </div>
-
-            
-
-        </>
+        </div>
     )
 }
