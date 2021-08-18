@@ -9,7 +9,6 @@ export default function Dashboard() {
 
     const [plansA, setPlansA] = useState([])
     const { plans } = useContext(PlanContext)
-    console.log(plansA)
 
     useEffect(() => {
         setPlansA(plans)
@@ -17,7 +16,7 @@ export default function Dashboard() {
 
     return (
         <>
-            <div className='d-flex flex-wrap container-lg my-5 gap-4 dashboard' style={{ minHeight: '70vh' }}>
+            <div className='d-flex flex-wrap container-lg my-5 gap-4 dashboard' style={{ minHeight: '70.2vh' }}>
                 {
                     plansA.length > 0 ? plansA.map(
                         (plan, i) => <SimpleCard

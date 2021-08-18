@@ -50,7 +50,7 @@ export default function PlanDetails() {
             </div>
 
             <div className=" text-center pt-1 pb-3">
-                {'{'} {plan.description} {'}'}
+                {'{'} {plan.description} {'}'} {' Topics: '} {plan.topics ? plan.topics.length : 0}
             </div>
 
             <div className="container my-2">
@@ -58,8 +58,8 @@ export default function PlanDetails() {
                 <div className="inbox">
                     {
                         plan.topics ? plan.topics.map((topic, i) => <div key={i} className="item">
-                            <input type="checkbox" onChange={() => handleCheck(i)} checked={topic.completed} />
-                            <p className='topic-name'>{topic.topicName}</p>
+                            {` ${i + 1}. `}  <input type="checkbox" onChange={() => handleCheck(i)} checked={topic.completed} />
+                            <p className='topic-name'> {topic.topicName}</p>
                         </div>) : null
                     }
                 </div>

@@ -60,7 +60,11 @@ export default function SimpleCard({ plan, sno }) {
                             {plan.description}
                         </Typography>
 
-                        <div className='py-3' >
+                        <Typography className={classes.pos} color="textSecondary">
+                            {' Topics: '} {plan.topics ? plan.topics.length : 0}
+                        </Typography>
+
+                        <div className='py-1' >
                             <ProgressBar now={progress} label={`${progress}%`} />
                         </div>
 

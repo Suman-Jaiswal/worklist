@@ -45,7 +45,7 @@ export default function AddPlanBtn({ variant, color }) {
 
     return (
         <>
-            <Button variant={variant} className={color} onClick={openModal} aria-labelledby="contained-modal-title-vcenter" centered >
+            <Button variant={variant} className={color} onClick={openModal} aria-labelledby="contained-modal-title-vcenter" >
                 <FontAwesomeIcon icon={faPlus} size='lg' /> <span className='ms-1 create-text'>Create</span>
             </Button>
 
